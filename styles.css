@@ -1,0 +1,32 @@
+body {
+    background-color: rgb(211, 216, 226);
+}
+table {
+    font-size: 22px;
+    text-align:center;
+    margin-left: auto; 
+    margin-right: auto;
+    padding: 10px;
+    width:250pt;
+    color:rgb(14, 49, 112);
+
+}
+td{
+    border-bottom: 1pt solid rgb(44, 144, 190);
+}
+
+td.toprow {
+    background-color: rgb(13, 46, 189);
+    color: lightblue;
+}
+td:hover{
+    background-color: rgb(198, 207, 224);
+    font-style: bold;
+    color:rgb(5, 38, 104);
+    border: 1pt solid ;  
+}
+td.toprow:hover {
+    background-color: rgb(2, 11, 49);
+    color: rgb(138, 201, 223);
+}
+
