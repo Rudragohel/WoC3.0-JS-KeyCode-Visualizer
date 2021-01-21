@@ -20,7 +20,6 @@ p.title {
     position: relative;
     width:505px;
     animation-iteration-count: infinite;
-    text-shadow:rgb(2, 11, 49);
     text-decoration: underline;
     font-weight: bold;
 
