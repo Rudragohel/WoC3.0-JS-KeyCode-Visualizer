@@ -1,13 +1,43 @@
 body {
     background-color: rgb(211, 216, 226);
 }
+
+@keyframes move {
+    0%   {color:rgb(0, 4, 255); left:995px; }
+    20%  {color:red; }
+    40%  {color:blue; }
+    60%  {color:red;  }
+    80% {color:blue; }
+    100% {color:red; left:00px;}
+  }
+
+p.title {
+    color:rgb(32, 9, 163);
+    font-size: 20pt;
+    animation-name: move;
+    animation-duration: 20s;
+    animation-timing-function: linear;
+    position: relative;
+    width:505px;
+    animation-iteration-count: infinite;
+    text-shadow:rgb(2, 11, 49);
+    text-decoration: underline;
+    font-weight: bold;
+
+
+}
+
 table {
+    position: static;
     font-size: 22px;
     text-align:center;
     margin-left: auto; 
     margin-right: auto;
     padding: 10px;
+    width:250pt;
     color:rgb(14, 49, 112);
+    /*border: 2px solid  rgb(87, 103, 170);*/
+
 
 }
 td{
@@ -15,6 +45,8 @@ td{
 }
 
 td.toprow {
+    font-weight: bold;
+
     background-color: rgb(13, 46, 189);
     color: lightblue;
 }
@@ -25,6 +57,7 @@ td:hover{
     border: 1pt solid ;  
 }
 td.toprow:hover {
+    
     background-color: rgb(2, 11, 49);
     color: rgb(138, 201, 223);
 }
