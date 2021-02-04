@@ -49,13 +49,13 @@ table {
     background-color: rgb(13, 46, 189);
     color: lightblue;
 }
-.list_table td:hover{
+#myTable td:hover{
     background-color: rgb(198, 207, 224);
     font-style: bold;
     color:rgb(5, 38, 104);
     border: 1pt solid ;  
 }
-.list_tabletd.toprow:hover {
+#titletable td:hover {
     
     background-color: rgb(2, 11, 49);
     color: rgb(138, 201, 223);
