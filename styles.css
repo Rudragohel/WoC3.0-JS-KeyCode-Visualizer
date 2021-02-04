@@ -76,7 +76,7 @@ button{
 
 button:hover{
     position: absolute;
-    background-color: rgb(143, 172, 231);
+    background-color: rgb(190, 201, 226);
     color:rgb(14, 49, 112);
     border: 3px solid;
     border-radius: 5%;
