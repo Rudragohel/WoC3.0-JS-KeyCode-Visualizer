@@ -22,7 +22,7 @@ p.title {
     animation-iteration-count: infinite;
     text-decoration: underline;
     font-weight: bold;
-
+    
 
 }
 
@@ -39,25 +39,74 @@ table {
 
 
 }
-td{
+.list_table td{
     border-bottom: 1pt solid rgb(44, 144, 190);
 }
 
-td.toprow {
+.list_table td.toprow {
     font-weight: bold;
 
     background-color: rgb(13, 46, 189);
     color: lightblue;
 }
-td:hover{
+.list_table td:hover{
     background-color: rgb(198, 207, 224);
     font-style: bold;
     color:rgb(5, 38, 104);
     border: 1pt solid ;  
 }
-td.toprow:hover {
+.list_tabletd.toprow:hover {
     
     background-color: rgb(2, 11, 49);
     color: rgb(138, 201, 223);
 }
 
+button{
+    position: absolute;
+    background-color: rgb(183, 200, 235);
+    color: rgb(14, 49, 112);
+    border: 1px solid;
+    border-radius: 5%;
+    font-weight: bold;
+    font-size: 18px;
+    left: 1350px;
+    width: 100px;
+    height: 50px;
+}
+
+button:hover{
+    position: absolute;
+    background-color: rgb(143, 172, 231);
+    color:rgb(14, 49, 112);
+    border: 3px solid;
+    border-radius: 5%;
+    border-color: rgb(2, 26, 73);
+    font-weight: bold;
+    font-size: 18px;
+    left: 1350px;
+    width: 100px;
+    height: 50px;
+
+}
+button:active{
+    transform: translateY(4px);
+
+
+}
+
+#titable {
+    background-color:rgb(7, 48, 131);
+    color: rgb(211, 216, 226);  
+}
+#titable:hover{
+    color:rgb(238, 255, 1);
+}
+
+.ind_table {
+    border: 5px solid;
+    border-color: rgb(14, 49, 112);
+}
+
+#indtable:hover {
+    font-weight: bolder;
+}

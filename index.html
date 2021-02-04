@@ -7,16 +7,30 @@
         <p class = "title">
                 JavaScript KeyPress Information Visualizer
         </p>
-        <table>
+        <button type="button" id="tblbtn" onclick="showtable()">
+            Table
+        </button>
+        <table id="titletable" class="list_table">
                 <tr>
                     <td class="toprow">Key Code</td>
                     <td class="toprow">Key</td> 
                 </tr>
             <tr>
         </table>
-        <table id="myTable">
+        <table id="myTable" class="list_table">
         </table>
-
+        <table id="titable" style="display:none" class="ind_table">
+            <tr>
+                <td>
+                    Key Code
+                </td>
+                <td>
+                    Key 
+                </td>
+            </tr>
+        </table>
+        <table id="indTable" class="ind_table">
+        </table>
     </body>
     <script src="jsscript.js"></script>
 

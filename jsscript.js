@@ -1,35 +1,35 @@
 const keyCodes = {
     0: 'That key has no keycode',
     3: 'break',
-    8: 'backspace / delete',
-    9: 'tab',
+    8: 'Backspace',
+    9: 'Tab',
     12: 'clear',
-    13: 'enter',
-    16: 'shift',
-    17: 'ctrl',
-    18: 'alt',
+    13: 'Enter',
+    16: 'Shift',
+    17: 'Control',
+    18: 'Alt',
     19: 'pause/break',
-    20: 'caps lock',
+    20: 'CapsLock',
     21: 'hangul',
     25: 'hanja',
-    27: 'escape',
+    27: 'Escape',
     28: 'conversion',
     29: 'non-conversion',
-    32: 'spacebar',
-    33: 'page up',
-    34: 'page down',
-    35: 'end',
-    36: 'home',
-    37: 'left arrow',
-    38: 'up arrow',
-    39: 'right arrow',
-    40: 'down arrow',
+    32: 'Space',
+    33: 'PageUp',
+    34: 'PageDown',
+    35: 'End',
+    36: 'Home',
+    37: 'ArrowLeft',
+    38: 'ArrowUp',
+    39: 'ArrowRight',
+    40: 'ArrowDown',
     41: 'select',
     42: 'print',
     43: 'execute',
     44: 'Print Screen',
-    45: 'insert',
-    46: 'delete',
+    45: 'Insert',
+    46: 'Delete',
     47: 'help',
     48: '0',
     49: '1',
@@ -88,44 +88,44 @@ const keyCodes = {
     104: 'numpad 8',
     105: 'numpad 9',
     106: 'multiply',
-    107: 'add',
+    107: '+',
     108: 'numpad period (firefox)',
     109: 'subtract',
     110: 'decimal point',
-    111: 'divide',
-    112: 'f1',
-    113: 'f2',
-    114: 'f3',
-    115: 'f4',
-    116: 'f5',
-    117: 'f6',
-    118: 'f7',
-    119: 'f8',
-    120: 'f9',
-    121: 'f10',
-    122: 'f11',
-    123: 'f12',
-    124: 'f13',
-    125: 'f14',
-    126: 'f15',
-    127: 'f16',
-    128: 'f17',
-    129: 'f18',
-    130: 'f19',
-    131: 'f20',
-    132: 'f21',
-    133: 'f22',
-    134: 'f23',
-    135: 'f24',
-    136: 'f25',
-    137: 'f26',
-    138: 'f27',
-    139: 'f28',
-    140: 'f29',
-    141: 'f30',
-    142: 'f31',
-    143: 'f32',
-    144: 'num lock',
+    111: '/',
+    112: 'F1',
+    113: 'F2',
+    114: 'F3',
+    115: 'F4',
+    116: 'F5',
+    117: 'F6',
+    118: 'F7',
+    119: 'F8',
+    120: 'F9',
+    121: 'F10',
+    122: 'F11',
+    123: 'F12',
+    124: 'F13',
+    125: 'F14',
+    126: 'F15',
+    127: 'F16',
+    128: 'F17',
+    129: 'F18',
+    130: 'F19',
+    131: 'F20',
+    132: 'F21',
+    133: 'F22',
+    134: 'F23',
+    135: 'F24',
+    136: 'F25',
+    137: 'F26',
+    138: 'F27',
+    139: 'F28',
+    140: 'F29',
+    141: 'F30',
+    142: 'F31',
+    143: 'F32',
+    144: 'NumLock',
     145: 'scroll lock',
     151: 'airplane mode',
     160: '^',
@@ -141,9 +141,9 @@ const keyCodes = {
     170: '*',
     171: '~ + * key',
     172: 'home key',
-    173: 'minus (firefox), mute/unmute',
-    174: 'decrease volume level',
-    175: 'increase volume level',
+    173: '-',
+    174: 'AudioVolumeDown',
+    175: 'AudioVolumeUp',
     176: 'next',
     177: 'previous',
     178: 'stop',
@@ -154,7 +154,7 @@ const keyCodes = {
     183: 'increase volume level (firefox)',
     186: 'semi-colon / ñ',
     187: 'equal sign',
-    188: 'comma',
+    188: ',',
     189: 'dash',
     190: 'period',
     191: 'forward slash / ç',
@@ -180,10 +180,14 @@ const keyCodes = {
     244: 'kanji',
     251: 'unlock trackpad (Chrome/Edge)',
     255: 'toggle touchpad',
+    
 };
-for(const key in keyCodes){
-
     var table=document.getElementById("myTable");
+    var ttable=document.getElementById("titletable");
+    var itable=document.getElementById("indTable");
+    var titleitable=document.getElementById("titable");
+
+for(const key in keyCodes){
     
     var row_l=table.row_length;
     var row = table.insertRow(row_l);
@@ -196,3 +200,45 @@ for(const key in keyCodes){
     
 }
 
+var rl=0;
+
+document.addEventListener('keydown', (event) => {
+    
+    titletable.style.display="none";
+    table.style.display="none";
+    itable.style.display="";
+    titleitable.style.display="";
+
+    let { code, key, number, location, shiftKey, metaKey, altKey, ctrlKey } = event;
+    console.log(event.code);
+    var rl = itable.rows.length;
+
+    if(rl>0){
+        itable.deleteRow(0);
+    }
+                    
+    
+   for(const key in keyCodes){
+
+            if(event.key==keyCodes[key]){
+                var row_l=itable.row_length;
+                var row = itable.insertRow(row_l);
+    
+                var cell1 = row.insertCell(0);
+    
+                var cell2 = row.insertCell(1);
+                cell1.innerHTML = key;
+                cell2.innerHTML = keyCodes[key];
+            }
+
+        
+    }
+});
+
+
+function showtable(){
+    titletable.style.display="";
+    table.style.display="";
+    itable.style.display="none";
+    titleitable.style.display="none";
+}
